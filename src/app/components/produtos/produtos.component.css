@@ -3,10 +3,21 @@
 main {
   background-color: whitesmoke;
   font-family: 'Outfit', sans-serif;
+  width: 100%;
 }
 
 select, option, button, input {
   font-family: 'Outfit', sans-serif;
+}
+
+.botao__compra {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.botao__compra button {
+  font-size: 1.1rem;
 }
 
 .produto {
@@ -22,6 +33,11 @@ select, option, button, input {
   border-radius: 3%;
   padding: 20px;
   width: 300px;
+}
+
+.produto__conteudo__item {
+  padding: 10rem;
+  background-color: rgb(219, 218, 218);
 }
 
 .titulo__produtos {
@@ -184,7 +200,7 @@ select, option, button, input {
 .produto__conteudo div {
   border-width: 1px;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: .8rem;
 }
 
 .produto__conteudo img {
