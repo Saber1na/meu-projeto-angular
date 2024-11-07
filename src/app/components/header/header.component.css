@@ -55,6 +55,10 @@ nav a:hover {
   transition: 0.3s ease-in-out;
 }
 
+.menu-btn {
+  display: none;
+}
+
 button {
   background-color: #a73b1a;
   color: #fff;
@@ -66,4 +70,62 @@ button {
   border: none;
   cursor: pointer;
   transition: .2s;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #a73b1a;
+}
+
+@media (max-width: 768px) {
+
+.logo a{
+  font-size: 4rem;
+  margin-top: 2rem;
+  margin-left: 1.4rem;
+}
+
+button, nav {
+  display: none;
+}
+
+.mobile-menu-button {
+  display: block;
+  background-color: #a73b1a;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.mobile-menu-button:hover {
+  background-color: #fff;
+  color: #a73b1a;
+}
+
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-nav.active {
+  display: block;
+}
+
+.mobile-nav ul {
+  flex-direction: column;
+  align-items: center;
+}
 }

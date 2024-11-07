@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -16,4 +16,13 @@ export class HeaderComponent {
          header.classList.toggle('rolagem', window.scrollY > 10);
        }
      }
+    @ViewChild('mobileMenuButton', { static: true }) mobileMenuButton!: ElementRef<HTMLButtonElement>;
+    @ViewChild('mobileNav', { static: true }) mobileNav!: ElementRef<HTMLElement>;
+
+  ngAfterViewInit() {
+    this.mobileMenuButton.nativeElement.addEventListener('click', () => {
+      this.mobileNav.nativeElement.classList.toggle('active');
+    });
+  }
 }
+
