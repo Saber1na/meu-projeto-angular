@@ -77,7 +77,7 @@ section {
   display: block;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: rgb(82 82 91 / 90%);
+  color: #a73b1a;
 }
 
 .container__cores select {
@@ -89,7 +89,7 @@ section {
   padding: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  border-color: rgb(82 82 91 / 90%);
+  border: 1px solid #a73b1a;
 }
 
 .container__tamanho {
@@ -100,7 +100,7 @@ section {
   display: block;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: rgb(82 82 91 / 90%);
+  color: #a73b1a;
 }
 
 .container__tamanho select {
@@ -112,7 +112,7 @@ section {
   padding: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  border-color: rgb(82 82 91 / 90%);
+  border: 1px solid #a73b1a;
 }
 
 button {
@@ -137,7 +137,7 @@ button {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 600;
-  color: rgb(39 39 42 / 90%);
+  color: #a73b1a;
 }
 
 .container__descricao__detalhes p {

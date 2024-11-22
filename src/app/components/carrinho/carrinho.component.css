@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+section {
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: rgb(224, 222, 222);
+  border-radius: 0.5rem;
+}
+
+.container__checkout {
+  width: 50%;
+  padding-right: 1rem;
+}
+
+.container__checkout h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #a73b1a;
+}
+
+.container__checkout p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #000000;
+}
+
+.container__checkout ul {
+  margin-top: 1rem;
+}
+
+.container__checkout li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container__checkout__envio {
+  margin-top: 1rem;
+  color: #000000;
+}
+
+.container__checkout__total {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.pagamento {
+  width: 50%;
+  padding-left: 1rem;
+}
+
+.pagamento h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #a73b1a;
+}
+
+.pagamento__cartao {
+  background: linear-gradient(90deg, #52e7dbf3 0%, #aaf3edf3 70%);
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.fonte__menor {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.fonte__maior {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.pagamento__input {
+  margin-top: 1rem;
+}
+
+.pagamento__input input {
+  font-family: 'Outfit', sans-serif;
+  border: 1px solid #a73b1a;
+}
+
+.cartao {
+  border-width: 1px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.validade {
+  border-width: 1px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.cvc {
+  border-width: 1px;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.botao {
+  font-family: 'Outfit', sans-serif;
+  width: 100%;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: rgb(255 255 255 / 90%);
+  background-color: #a73b1a;
+  border: none;
+  cursor: pointer;
+}
