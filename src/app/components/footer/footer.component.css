@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  height: 19vh;
+  background-color: black;
+  padding: 0 5%;
+  font-family: 'Outfit', sans-serif;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #a73b1a;
+  font-size: 1.2rem;
+}
+
+img {
+  width: 30px;
+}
+
+.logo a {
+  font-family: 'Rowdies', cursive;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.logo p{
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.2rem;
+  gap: 10px;
+}
+
+.links a {
+  font-size: 1.25rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.copy {
+  color: #fff;
+  text-align: center;
+}
