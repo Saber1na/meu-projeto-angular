@@ -10,6 +10,48 @@
     </ul>
   </nav>
   <div>
-    <button routerLink="/login">Login</button>
+    <button (click)="openPopup()">Login</button>
   </div>
 </header>
+
+<!-- Estrutura do Pop-up -->
+<div class="popup" *ngIf="isPopupVisible">
+  <div class="popup-content">
+    <div class="limite" id="login">
+      <div class="container-login">
+        <div class="quebra-login">
+          <form class="login-form">
+            <span class="login-form-titulo">Entrar com</span>
+            <div class="login-form-social">
+              <a href="#" class="btn-face">
+                <img src="../../../assets/facebook.png" alt="" />Facebook
+              </a>
+              <a href="#" class="btn-google">
+                <img src="../../../assets/google.png" alt="GOOGLE" />Google
+              </a>
+            </div>
+            <div class="login-form-form">
+              <span class="txt1">Nome de usuário</span>
+              <input class="input" type="text" name="username" />
+              <span class="txt1">Senha</span>
+              <input class="input" type="password" name="pass" />
+              <a href="#" class="txt2">Esqueceu?</a>
+              <!-- Botão de Entrar -->
+              <button type="button" class="login-form-btn" (click)="onCadastro()">Entrar</button>
+              <span class="txt2">Não é um membro?</span>
+              <a href="#" class="txt2 bo1" (click)="onCadastro()">Cadastre-se agora</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensagem de sucesso -->
+    <div *ngIf="isCadastroSuccess" class="mensagem-sucesso">
+      <p>🎉 Acesso realizado com sucesso!</p>
+    </div>
+
+    <!-- Botão Fechar -->
+    <button (click)="closePopup()">Fechar</button>
+  </div>
+</div>

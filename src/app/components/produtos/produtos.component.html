@@ -1,429 +1,80 @@
 <main id="produtos">
   <section class="lista-produtos">
-      <div class="container__produto">
-          <h1 class="titulo__produto">Produtos</h1>
-          <div class="filtro__produto">
-            <span>30 Produtos</span>
-            <select>
-              <option>Mais Populares</option>
-              <option>Menor Preço</option>
-              <option>Maior Preço</option>
-            </select>
-          </div>
-          <div class="filtro__busca__produtos">
-            <input type="text" placeholder="Buscar produtos..."/>
-            <button>Buscar</button>
-          </div>
-          <div class="filtro__opcoes__produtos">
-            <input type="checkbox" id="frete-gratis"/>
-            <label for="frete-gratis">Frete grátis</label>
-          </div>
-          <div class="filtro__produto__tamanho">
-            <aside>
-              <button>Limpar todos os filtros</button>
-              <h2>TIPO</h2>
-              <div>
-                <label><input class="filtro" type="checkbox"/> Barracas </label>
-                <label><input type="checkbox"/> Mochilas </label>
-                <label><input type="checkbox"/> Sacos de dormir </label>
-                <label><input type="checkbox"/> Colchões infláveis </label>
-                <label><input type="checkbox"/> Fogareiros e lampiões </label>
-                <label><input type="checkbox"/> Cadeiras e mesas </label>
-              </div>
-            </aside>
-            <div class="produto__conteudo">
-              <div class="produto__conteudo__item">
-                <img src="../../../assets/barraca1.png" alt="Barraca 1"/>
-                <h3>Barraca de camping</h3>
-                <p>Flash 6 NTK de montagem rápida e 3000mm de coluna d'água</p>
-                <div class="produto__conteudo__preco">
-                  <span class="preco__original">R$ 4.158,20</span>
-                  <span class="preco__desconto">R$ 4.033,45</span>
-                </div>
-                <span class="produto__avaliacoes">⭐ 4.6</span>
-                <div class="botao__compra">
-                  <button>Comprar</button>
-                </div>
-              </div>
-              <div class="produto__conteudo__item">
-                <img src="../../../assets/barraca2.png" alt="Barraca 2"/>
-                <h3>Barraca de camping</h3>
-                <p>Explorer 4/6 NTK com 2500mm de coluna d'água</p>
-                <div class="produto__conteudo__preco">
-                  <span class="preco__original">R$ 3.112,40</span>
-                  <span class="preco__desconto">R$ 3.019,03</span>
-                </div>
-                <span class="produto__avaliacoes">⭐ 4.7</span>
-                <div class="botao__compra">
-                  <button>Comprar</button>
-                </div>
-              </div>
-              <div class="produto__conteudo__item">
-                <img src="../../../assets/barraca3.png" alt="Barraca 3"/>
-                <h3>Barraca de camping</h3>
-                <p>Colorado NTK 5/6 pessoas e coluna d'água de 2500mm</p>
-                <div class="produto__conteudo__preco">
-                  <span class="preco__original">R$ 2.403,00</span>
-                  <span class="preco__desconto">R$ 2.330,91</span>
-                </div>
-                <span class="produto__avaliacoes">⭐ 4.8</span>
-                <div class="botao__compra">
-                  <button>Comprar</button>
-                </div>
-              </div>
-              <div class="produto__conteudo__item">
-                  <img src="../../../assets/barraca4.png" alt="Barraca 4"/>
-                  <h3>Barraca de Camping</h3>
-                  <p>NTK Indy GT 3/4 pessoas Coluna d'água de 2500mm</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 1.859,70</span>
-                    <span class="preco__desconto">R$ 1.803,91</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/barraca5.png" alt="Barraca 5"/>
-                  <h3>Barraca Patagônia</h3>
-                  <p>NTK 4 pessoas com avancê 3000mm</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 1.560,90</span>
-                    <span class="preco__desconto">R$ 1.514,07</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/mochila1.png" alt="Mochila 1"/>
-                  <h3>Mochila Duffle</h3>
-                  <p>Bag NTK para Viagens 70 Litros</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 511,00</span>
-                    <span class="preco__desconto">R$ 495,67</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/mochila2.png" alt="Mochila 2"/>
-                  <h3>Mochila Duffle</h3>
-                  <p>BK NTK para Viagens 20L</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 235,00</span>
-                    <span class="preco__desconto">R$ 227,95</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/mochila3.png" alt="Mochila 3"/>
-                  <h3>Mochila Cargueira</h3>
-                  <p>Nautika Intruder 60 litros</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 589,50</span>
-                    <span class="preco__desconto">R$ 571,82</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/mochila4.png" alt="Mochila 4"/>
-                  <h3>Mochila Semi-Cargueira</h3>
-                  <p>Nautika Intruder 45 litros</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 437,50</span>
-                    <span class="preco__desconto">R$ 424,38</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/mochila5.png" alt="Mochila 5"/>
-                  <h3>Mochila daypack</h3>
-                  <p>Street NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 214,30</span>
-                    <span class="preco__desconto">R$ 207,87</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/saco-dormir1.png" alt="Saco de Dormir 1"/>
-                  <h3>Saco de dormir Kokan</h3>
-                  <p>NTK solteiro para temperatura entre 6°C e 20°C</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 257,10</span>
-                    <span class="preco__desconto">R$ 249,39</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/saco-dormir2.png" alt="Saco de Dormir 2"/>
-                  <h3>Saco de dormir Bugy</h3>
-                  <p>NTK solteiro para temperatura entre 8°C e 15°C</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 128,60</span>
-                    <span class="preco__desconto">R$ 124,74</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/saco-dormir3.png" alt="Saco de Dormir 3"/>
-                  <h3>Saco de dormir sarcófago Antartik</h3>
-                  <p>NTK -7°C à 3°C</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 428,90</span>
-                    <span class="preco__desconto">R$ 416,03</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/saco-dormir4.png" alt="Saco de Dormir 4"/>
-                  <h3>Saco de dormir Everest do tipo sarcófago</h3>
-                  <p>NTK -10°C a 5°C</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 522,00</span>
-                    <span class="preco__desconto">R$ 506,34</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/saco-dormir5.png" alt="Saco de Dormir 5"/>
-                  <h3>Saco de Dormir Viper</h3>
-                  <p>Solteiro para Temperaturas entre 5°C à 12°C NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 170,00</span>
-                    <span class="preco__desconto">R$ 164,90</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/colchao1.png" alt="Colchao 1"/>
-                  <h3>Colchão inflável casal</h3>
-                  <p>Zenite com inflador incorporado que suporta 300kg NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 493,10</span>
-                    <span class="preco__desconto">R$ 478,31</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/colchao2.png" alt="Colchao 2"/>
-                  <h3>Colchão Inflável Solteiro Mirage</h3>
-                  <p>Nautika Até 100kg</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 191,70</span>
-                    <span class="preco__desconto">R$ 185,95</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/colchao3.png" alt="Colchao 3"/>
-                  <h3>Colchão inflável casal Mirage</h3>
-                  <p>NTK que suporta até 200kg</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 299,50</span>
-                    <span class="preco__desconto">R$ 290,52</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/colchao4.png" alt="Colchao 4"/>
-                  <h3>Colchão inflável king Brunei</h3>
-                  <p>Com altura extra dimensionada que suporta 250kg NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 986,20</span>
-                    <span class="preco__desconto">R$ 956,61</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/colchao5.png" alt="Colchao 5"/>
-                  <h3>Colchão inflável solteiro Zenite</h3>
-                  <p>Com inflador incorporado que suporta 100kg NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 255,90</span>
-                    <span class="preco__desconto">R$ 248,22</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/fogareiro1.png" alt="Fogareiro 1"/>
-                  <h3>Fogareiro de Mesa</h3>
-                  <p>Frontier com Maleta NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 187,10</span>
-                    <span class="preco__desconto">R$ 181,49</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/lampiao2.png" alt="Lampiao 1"/>
-                  <h3>Lampião Lanterna USB</h3>
-                  <p>Radiant NTK 250 Lúmens Recarregável</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 170,00</span>
-                    <span class="preco__desconto">R$ 164,90</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/fogareiro3.png" alt="Fogareiro 2"/>
-                  <h3>Fogareiro Stain</h3>
-                  <p>NTK em Aço Inox com Ignição Automática e Flex Fuel</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 227,80</span>
-                    <span class="preco__desconto">R$ 220,97</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/fogareiro4.png" alt="Fogareiro 3"/>
-                  <h3>Fogareiro Átomo</h3>
-                  <p>NTK em Aço Inox com Sistema de Regulagem</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 101,40</span>
-                    <span class="preco__desconto">R$ 98,36</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/lampiao5.png" alt="Lampiao 2"/>
-                  <h3>Lampião Cairo</h3>
-                  <p>NTK com sistema de cartucho</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 227,80</span>
-                    <span class="preco__desconto">R$ 220,97</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/cadeira1.png" alt="Cadeira 1"/>
-                  <h3>Cadeira dobrável Andrade</h3>
-                  <p>De 1 estágio tamanho P NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 170,50</span>
-                    <span class="preco__desconto">R$ 165,39</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/cadeira2.png" alt="Cadeira 2"/>
-                  <h3>Banqueta Dobrável</h3>
-                  <p>Para Camping Step 1 Verde NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 65,00</span>
-                    <span class="preco__desconto">R$ 63,05</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/cadeira3.png" alt="Cadeira 3"/>
-                  <h3>Cadeira Dobrável Nautika Boni</h3>
-                  <p>Com Assento e Encosto Estofado</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 315,00</span>
-                    <span class="preco__desconto">R$ 305,55</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../../assets/mesa4.png" alt="Mesa 1"/>
-                  <h3>Mesa dobrável Robust</h3>
-                  <p>Com ajuste de altura 80cm NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 239,90</span>
-                    <span class="preco__desconto">R$ 232,70</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-                <div class="produto__conteudo__item">
-                  <img src="../../assets/mesa5.png" alt="Mesa 2"/>
-                  <h3>Mesa dobrável Lua</h3>
-                  <p>Com 4 porta copos da NTK</p>
-                  <div class="produto__conteudo__preco">
-                    <span class="preco__original">R$ 200,80</span>
-                    <span class="preco__desconto">R$ 194,78</span>
-                  </div>
-                  <span class="produto__avaliacoes">⭐ 4.8</span>
-                  <div class="botao__compra">
-                    <button>Comprar</button>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
+   <div class="container__produto">
+     <h1 class="titulo__produto">Produtos</h1>
+     <div class="filtro__produto">
+       <span> {{ products.length }} Produtos</span>
+       <select [(ngModel)]="ordenacao" (change)="ordenarProdutos()">
+         <option value="popular">Mais Populares</option>
+         <option value="menor-preco">Menor Preço</option>
+         <option value="maior-preco">Maior Preço</option>
+       </select>
+     </div>
+     <div class="filtro__busca__produtos">
+       <input type="text" placeholder="Buscar produtos..." [(ngModel)]="searchTerm"/>
+       <button (click)="buscarProdutos()">Buscar</button>
+     </div>
+     <div class="filtro__opcoes__produtos">
+       <label>
+         <input type="checkbox" [(ngModel)]="filtroFreteGratis"/>
+         Frete grátis
+       </label>
+     </div>
+     <div>
+       <ul class="produto__conteudo">
+         <li *ngFor="let produto of filteredProducts">
+           <article class="produto__conteudo__item">
+             <img [src]="produto.image" [alt]="produto.name" />
+             <h3>{{ produto.name }}</h3>
+             <p>{{ produto.description }}</p>
+             <div class="produto__conteudo__preco">
+               <span class="preco__original">
+                 {{ produto.value | currency:'BRL':'symbol':'1.2-2' }}
+               </span>
+               <span class="preco__desconto">
+                 {{ produto.discount | currency:'BRL':'symbol':'1.2-2' }}
+               </span>
+             </div>
+             <span class="produto__avaliacoes">⭐ {{ produto.rating }}</span>
+             <div class="produto__conteudo__botoes" button>
+               <button (click)="openPopup(produto)">Comprar</button>
+             </div>
+           </article>
+         </li>
+       </ul>
+     </div>
+   </div>
   </section>
 </main>
+<!-- Popup -->
+<div *ngIf="isPopupVisible" class="popup">
+ <div class="popup-content">
+   <section>
+     <div class="container">
+       <div class="container_imagem">
+         <img [src]="produtoSelecionado?.image" alt="{{ produtoSelecionado?.name }}" class="w-full h-auto rounded-lg" />
+       </div>
+     </div>
+     <div class="alinhamento" >
+       <div class="container_descricao">
+         <h3>Produto Selecionado: {{ produtoSelecionado?.name }}</h3>
+         <div class="descricao_preco">
+         <span class="preco__original">{{ produtoSelecionado?.value | currency:'BRL':'symbol':'1.2-2' }}</span>
+         <span class="preco__desconto">{{ produtoSelecionado?.discount | currency:'BRL':'symbol':'1.2-2' }}</span>
+        </div>
+         <div class="container__descricao__detalhes">
+           <h3>Descrição</h3>
+           <p>{{ produtoSelecionado?.description }}</p>
+         </div>
+         <div class="produto__conteudo__botoes__popup">
+         <button>Comprar</button>    
+         <button (click)="closePopup()">Fechar</button>
+     </div>
+    </div>
+     </div>
+  </section>
+ </div>
+</div>
+
+
+
