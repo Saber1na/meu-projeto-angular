@@ -68,6 +68,7 @@ select, option, button, input {
 
 .lista-produtos {
   display: flex;
+  padding-top: 4rem;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -128,7 +129,7 @@ select, option, button, input {
   border-radius: 0.25rem;
   padding: 0.5rem;
   cursor: pointer;
-  border: 1px solid #a73b1a;  
+  border: 1px solid #a73b1a;
 }
 
 .filtro__busca__produtos button:hover, .produto__conteudo__botoes button:hover {
@@ -310,9 +311,9 @@ select, option, button, input {
 .popup-content {
   background-color: #fff;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
-  max-width: 90rem;
+  max-width: 70rem;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -373,7 +374,6 @@ section {
   margin-top: 30px;
   margin-bottom: 30px;
   border-radius: 0.5rem;
-  padding: 1rem;
 }
 
 .container_imagem {
@@ -520,3 +520,31 @@ button {
   }
 }
 
+.notificacao {
+  position: fixed;
+  top: 5rem;
+  right: 50rem;
+  background-color: #4caf50;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

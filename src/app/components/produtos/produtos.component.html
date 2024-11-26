@@ -46,10 +46,13 @@
    </div>
   </section>
 </main>
+<div class="notificacao" *ngIf="mensagem">
+  {{ mensagem }}
+</div>
 <!-- Popup -->
 <div *ngIf="isPopupVisible" class="popup">
  <div class="popup-content">
-   <section>
+    <section>
      <div class="container">
        <div class="container_imagem">
          <img [src]="produtoSelecionado?.image" alt="{{ produtoSelecionado?.name }}" class="w-full h-auto rounded-lg" />
@@ -67,12 +70,12 @@
            <p>{{ produtoSelecionado?.description }}</p>
          </div>
          <div class="produto__conteudo__botoes__popup">
-         <button>Comprar</button>    
+         <button (click)="adicionarAoCarrinho(produtoSelecionado)">Adicionar ao carrinho</button>
          <button (click)="closePopup()">Fechar</button>
+         </div>
+       </div>
      </div>
-    </div>
-     </div>
-  </section>
+    </section>
  </div>
 </div>
 

@@ -1,20 +1,74 @@
 <header id="header">
-  <div class="logo">
-    <a href="#">Camplex</a>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#produtos">Produtos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
-  <div>
-    <button (click)="openPopup()">Login</button>
+  <section>
+    <div class="logo">
+      <a href="#">Camplex</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div>
+      <button class="login" (click)="openPopup()">Login</button>
+    </div>
+  </section>
+  <div class="carrinho">
+    <button class="btn-carrinho" (click)="openCarrinho()"><img src="../../../assets/bolsa-de-compras.png" alt=""></button>
+    <span class="carrinho-quantidade">{{ carrinho.length }}</span>
   </div>
 </header>
+<div class="notificacao" *ngIf="mensagem">
+  {{ mensagem }}
+</div>
+<div class="popup" *ngIf="isPopupVisible1">
+  <div class="">
+    <section class="carrinho-modal">
+      <div class="container">
+        <div class="container__checkout">
+          <h2>Checkout</h2>
+          <p>ORDEM #0101</p>
+          <ul>
+            <li *ngFor="let produto of carrinho">
+              <span>{{ produto.name }}</span>
+              <span>{{ produto.value | currency:'BRL' }}</span>
+              <button class="btn-remover" (click)="removerDoCarrinho(produto.id)">X</button>
+            </li>
+          </ul>
+          <div class="container__checkout__envio">
+            <p>Frete</p>
+            <p>R$9,50</p>
+          </div>
+          <div class="container__checkout__total">
+            <p>Total</p>
+            <p>{{ totalCarrinho | currency:'BRL' }}</p>
+          </div>
+        </div>
 
-<!-- Estrutura do Pop-up -->
+        <div class="pagamento">
+          <h2>Pagamento</h2>
+          <div class="pagamento__cartao">
+            <p class="fonte__menor">NÚMERO DO CARTÃO</p>
+            <p class="fonte__maior">{{ cardNumber || '0000 0000 0000 0000' }}</p>
+            <p class="fonte__menor">VALIDADE</p>
+            <p class="fonte__maior">{{ expiration || 'MM / YY' }}</p>
+            <p class="fonte__menor">CVV</p>
+            <p class="fonte__maior">{{ cvc || '000' }}</p>
+          </div>
+          <div class="pagamento__input">
+            <input type="text" placeholder="1234 5678 9123 4567" maxlength="19" class="cartao" [value]="cardNumber" (input)="onCardNumberInput($event)"/>
+            <input type="text" placeholder="MM / YY" maxlength="7" class="validade" [value]="expiration" (input)="onExpirationInput($event)"/>
+            <input type="text" placeholder="CVC" maxlength="3" class="cvc" [value]="cvc" (input)="onCvcInput($event)"/>
+            <button class="botao">FINALIZAR</button>
+          </div>
+        </div>
+      </div>
+      <button class="login-form-btn" (click)="closeCarrinho()">Fechar</button>
+    </section>
+  </div>
+</div>
+
 <div class="popup" *ngIf="isPopupVisible">
   <div class="popup-content">
     <div class="limite" id="login">
@@ -36,22 +90,15 @@
               <span class="txt1">Senha</span>
               <input class="input" type="password" name="pass" />
               <a href="#" class="txt2">Esqueceu?</a>
-              <!-- Botão de Entrar -->
               <button type="button" class="login-form-btn" (click)="onCadastro()">Entrar</button>
               <span class="txt2">Não é um membro?</span>
-              <a href="#" class="txt2 bo1" (click)="onCadastro()">Cadastre-se agora</a>
+              <a href="#" class="txt2 bo1">Cadastre-se agora</a>
             </div>
+            <button class="login-form-btn" (click)="closePopup()">Fechar</button>
           </form>
         </div>
       </div>
     </div>
 
-    <!-- Mensagem de sucesso -->
-    <div *ngIf="isCadastroSuccess" class="mensagem-sucesso">
-      <p>🎉 Acesso realizado com sucesso!</p>
-    </div>
-
-    <!-- Botão Fechar -->
-    <button (click)="closePopup()">Fechar</button>
   </div>
 </div>

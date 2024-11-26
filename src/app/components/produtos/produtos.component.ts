@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CarrinhoService } from '../../carrinho.service';
 
 export interface Produto {
+ id: number;
  name: string;
  image: string;
  description: string;
@@ -14,19 +16,18 @@ export interface Produto {
 @Component({
   selector: 'app-produtos',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,],
   templateUrl: './produtos.component.html',
   styleUrls: ['./produtos.component.css']
 })
 
 export class ProdutosComponent implements OnInit {
 
-  
+  constructor(private carrinhoService: CarrinhoService) {}
 
-
-  
   products: Produto[] = [
     {
+      id: 1,
       name: 'Barraca de Camping',
       image: '../../../assets/barraca1.png',
       description: 'Flash 6 NTK de montagem rápida e 3000mm de coluna d´água',
@@ -36,6 +37,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 2,
       name: 'Barraca de Camping',
       image: '../../../assets/barraca2.png',
       description: 'Explorer 4/6 NTK com 2500mm de coluna d´água',
@@ -45,6 +47,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 3,
       name: 'Barraca de Camping',
       image: '../../../assets/barraca3.png',
       description: 'Colorado NTK 5/6 pessoas e coluna d´água de 2500mm',
@@ -54,6 +57,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 4,
       name: 'Barraca de Camping',
       image: '../../../assets/barraca4.png',
       description: 'NTK Indy GT 3/4 pessoas Coluna d´água de 2500mm',
@@ -63,6 +67,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 5,
       name: 'Barraca Patagônia',
       image: '../../../assets/barraca5.png',
       description: 'NTK 4 pessoas com avancê 3000mm',
@@ -72,6 +77,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 6,
       name: 'Mochila Duffle',
       image: '../../../assets/mochila1.png',
       description: 'Bag NTK para Viagens 70 Litros',
@@ -81,6 +87,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 7,
       name: 'Mochila Duffle',
       image: '../../../assets/mochila2.png',
       description: 'BK NTK para Viagens 20L',
@@ -90,6 +97,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 8,
       name: 'Mochila Cargueira',
       image: '../../../assets/mochila3.png',
       description: 'Nautika Intruder 60 litros',
@@ -99,6 +107,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 9,
       name: 'Mochila Semi-Cargueira',
       image: '../../../assets/mochila4.png',
       description: 'Nautika Intruder 45 litros',
@@ -108,6 +117,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 10,
       name: 'Mochila Daypack',
       image: '../../../assets/mochila5.png',
       description: 'Street NTK',
@@ -117,6 +127,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 11,
       name: 'Saco de dormir Kokan',
       image: '../../../assets/saco-dormir1.png',
       description: 'NTK solteiro para temperatura entre 6°C e 20°C',
@@ -126,6 +137,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 12,
       name: 'Saco de dormir Bugy',
       image: '../../../assets/saco-dormir2.png',
       description: 'NTK solteiro para temperatura entre 8°C e 15°C',
@@ -135,6 +147,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 13,
       name: 'Saco de dormir sarcófago Antartik',
       image: '../../../assets/saco-dormir3.png',
       description: 'NTK -7°C à 3°C',
@@ -144,6 +157,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 14,
       name: 'Saco de dormir Everest do tipo sarcófago',
       image: '../../../assets/saco-dormir4.png',
       description: 'NTK -10°C a 5°C',
@@ -153,6 +167,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 15,
       name: 'Saco de Dormir Viper',
       image: '../../../assets/saco-dormir5.png',
       description: 'Solteiro para Temperaturas entre 5°C à 12°C NTK',
@@ -162,6 +177,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 16,
       name: 'Colchão inflável casal',
       image: '../../../assets/colchao1.png',
       description: 'Zenite com inflador incorporado que suporta 300kg NTK',
@@ -171,6 +187,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 17,
       name: 'Colchão Inflável Solteiro Mirage',
       image: '../../../assets/colchao2.png',
       description: 'Nautika Até 100kg',
@@ -180,6 +197,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 18,
       name: 'Colchão inflável casal Mirage',
       image: '../../../assets/colchao3.png',
       description: 'NTK que suporta até 200kg',
@@ -189,6 +207,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 19,
       name: 'Colchão inflável king Brunei',
       image: '../../../assets/colchao4.png',
       description: 'Com altura extra dimensionada que suporta 250kg NTK',
@@ -198,6 +217,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 20,
       name: 'Colchão inflável solteiro Zenite',
       image: '../../../assets/colchao5.png',
       description: 'Com inflador incorporado que suporta 100kg NTK',
@@ -207,6 +227,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 21,
       name: 'Fogareiro de Mesa',
       image: '../../../assets/fogareiro1.png',
       description: 'Frontier com Maleta NTK',
@@ -216,6 +237,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 22,
       name: 'Lampião Lanterna USB',
       image: '../../../assets/lampiao2.png',
       description: 'Radiant NTK 250 Lúmens Recarregável',
@@ -225,6 +247,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 23,
       name: 'Fogareiro Stain',
       image: '../../../assets/fogareiro3.png',
       description: 'NTK em Aço Inox com Ignição Automática e Flex Fuel',
@@ -234,6 +257,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 24,
       name: 'Fogareiro Átomo',
       image: '../../../assets/fogareiro4.png',
       description: 'NTK em Aço Inox com Sistema de Regulagem',
@@ -243,6 +267,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 25,
       name: 'Lampião Cairo',
       image: '../../../assets/lampiao5.png',
       description: 'NTK com sistema de cartucho',
@@ -252,6 +277,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 26,
       name: 'Cadeira dobrável Andrade',
       image: '../../../assets/cadeira1.png',
       description: 'De 1 estágio tamanho P NTK',
@@ -261,6 +287,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 27,
       name: 'Banqueta Dobrável',
       image: '../../../assets/cadeira2.png',
       description: 'Para Camping Step 1 Verde NTK',
@@ -270,6 +297,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 28,
       name: 'Cadeira Dobrável Nautika Boni',
       image: '../../../assets/cadeira3.png',
       description: 'Com Assento e Encosto Estofado',
@@ -279,6 +307,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 29,
       name: 'Mesa dobrável Robust',
       image: '../../../assets/mesa4.png',
       description: 'Com ajuste de altura 80cm NTK',
@@ -288,6 +317,7 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     },
     {
+      id: 30,
       name: 'Mesa dobrável Lua',
       image: '../../assets/mesa5.png',
       description: 'Com 4 porta copos da NTK',
@@ -297,31 +327,26 @@ export class ProdutosComponent implements OnInit {
       freeShipping: true,
     }
   ];
-   // Variáveis de controle para filtros e busca
-   searchTerm: string = ''; // Termo de busca
-   filtroFreteGratis: boolean = false; // Filtro de frete grátis
-   ordenacao: string = 'popular'; // Critério de ordenação
- 
-   // Produtos filtrados
+   mensagem: string | null = null;
+   searchTerm: string = '';
+   filtroFreteGratis: boolean = false;
+   ordenacao: string = 'popular';
+
    filteredProducts: Produto[] = this.products;
- 
-   // Controle de exibição do popup
+
    isPopupVisible: boolean = false;
-   produtoSelecionado: Produto | null = null; // Alterado para ser um objeto Produto ou null
- 
-   // Método para abrir o popup
-   openPopup(produto: Produto): void {
+   produtoSelecionado: any | null = null;
+
+   openPopup(produto: any): void {
      this.produtoSelecionado = produto;
      this.isPopupVisible = true;
    }
- 
-   // Método para fechar o popup
+
    closePopup(): void {
      this.isPopupVisible = false;
      this.produtoSelecionado = null;
    }
- 
-   // Filtrar os produtos por nome e frete grátis
+
    buscarProdutos(): void {
      this.filteredProducts = this.products.filter((produto) => {
        const matchSearch = produto.name
@@ -332,8 +357,6 @@ export class ProdutosComponent implements OnInit {
        return matchSearch && matchFreeShipping;
      });
    }
- 
-   // Ordenar os produtos
    ordenarProdutos(): void {
      this.filteredProducts.sort((a, b) => {
        if (this.ordenacao === 'menor-preco') {
@@ -341,17 +364,26 @@ export class ProdutosComponent implements OnInit {
        } else if (this.ordenacao === 'maior-preco') {
          return b.discount - a.discount;
        } else {
-         // Caso seja "popular" ou outro critério padrão
-         return b.rating! - a.rating!; // rating pode ser undefined, por isso o "!"
+         return b.rating! - a.rating!;
        }
      });
    }
- 
-   // ngOnInit substitui o ngOnChanges se não for necessário usar
+
    ngOnInit(): void {
      this.buscarProdutos();
      this.ordenarProdutos();
    }
+   adicionarAoCarrinho(produto: any): void {
+     this.carrinhoService.adicionarProduto(produto);
+     this.exibirMensagem("Produto adicionado ao carrinho!");
+     this.closePopup();
+   }
+   exibirMensagem(texto: string): void {
+    this.mensagem = texto;
+    setTimeout(() => {
+      this.mensagem = null;
+    }, 3000);
+  }
  }
 
 
